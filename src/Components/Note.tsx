@@ -33,7 +33,7 @@ const Note = ({ note, deleteNote }: Props) => {
           className="rendered-note"
         ></div>
         
-        <Link to={`/notes/${note.date.getTime()}`}>{note.date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) }</Link>
+        <Link to={`/notes-app/notes/${note.date.getTime()}`}>{note.date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) }</Link>
 
       </div>
     </div>

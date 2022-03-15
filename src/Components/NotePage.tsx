@@ -36,8 +36,8 @@ const NotePage = ({ notesList, setNotesList }: Props) => {
 
   return (
     <div className="note-page">
-      <Link to="/">back</Link>
-      <Link to="/">
+      <Link to="/notes-app">back</Link>
+      <Link to="/notes-app">
       <button onClick={() => { deleteNote(note.date); }}>delete</button>
       </Link>
       <div
