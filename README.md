@@ -1,6 +1,8 @@
 # notes-app
 
-[Click to see notes-app](https://memeraki.github.io/notes-app/).
+simple application for notes created with React.js and React Router and Markdown-it
+
+[Click to see notes-app](https://memeraki.github.io/notes-app/)
 
 ## About
 
