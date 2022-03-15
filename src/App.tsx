@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import './App.css';
 
+import NotesList from './Components/NotesList';
+import NotePage from './Components/NotePage';
+import { INote } from "./Interfaces";
+
 function App() {
+
+  const [notesList, setNotesList] = useState<INote[]>([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NotesList notesList={notesList} setNotesList={setNotesList} />} />
+          <Route path="/notes/:id" element={<NotePage notesList={notesList} setNotesList={setNotesList} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
